@@ -30,8 +30,13 @@ class Amplitude(object):
     def to_int(self, scale=1):
         ''' convert an amplitude to an integer given a scale such that one can
         choose the precision of the resulting integer '''
-
         return int(self.value * scale)
+
+    def __int__(self):
+        return self.to_int()
+
+    def __str__(self):
+        return self.value + " dB"
 
     @staticmethod
     def from_block(block):
