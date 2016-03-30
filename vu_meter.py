@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 import pyaudio
 from amplitude import Amplitude
-
-RATE = 44100
-INPUT_BLOCK_TIME = 0.05
-INPUT_FRAMES_PER_BLOCK = int(RATE*INPUT_BLOCK_TIME)
+from vu_constants import RATE, INPUT_FRAMES_PER_BLOCK
 
 def main():
     audio = pyaudio.PyAudio()

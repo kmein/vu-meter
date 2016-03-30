@@ -3,8 +3,7 @@ calculating, adding and displaying. '''
 
 import math
 import struct
-
-SHORT_NORMALIZE = 1.0 / 32768.0
+from vu_constants import SHORT_NORMALIZE
 
 class Amplitude(object):
     ''' an abstraction for Amplitudes (with an underlying float value)
