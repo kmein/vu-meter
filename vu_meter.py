@@ -16,7 +16,7 @@ def main():
         maximal = Amplitude()
         while True:
             data = stream.read(INPUT_FRAMES_PER_BLOCK)
-            amp = Amplitude.from_block(data)
+            amp = Amplitude.from_data(data)
             if amp > maximal:
                 maximal = amp
             amp.display(scale=100, mark=maximal)

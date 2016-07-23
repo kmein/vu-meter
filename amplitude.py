@@ -39,7 +39,7 @@ class Amplitude(object):
         return self.value + " dB"
 
     @staticmethod
-    def from_block(block):
+    def from_data(block):
         ''' generate an Amplitude object based on a block of audio input data '''
         count = len(block) / 2
         shorts = struct.unpack("%dh" % count, block)
@@ -53,4 +53,4 @@ class Amplitude(object):
         mark_val = mark.to_int(scale)
         delta = abs(int_val - mark_val)
         print(int_val * '*', (delta-1) * ' ', '|')
-
+        
